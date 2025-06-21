@@ -1,4 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>抢修回单模版2025.06.14更新</title>
+    <link rel="stylesheet" type="text/css" href="./static/main.css">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.ico">
+	<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.ico">
+   
+<style>
+.header {
+    padding: 20px;
+    background: var(--primary);
+    color: white;
+    border-radius: 12px 12px 0 0;
+    text-align: center;
+}
+
+.header h1::before {
+    content: "\26A1\62A2\4FEE\56DE\5355\6A21\7248-(\5efa\9633\516c\53f8)";
+}
+.header p::before {
+    content: "\2705\66FE\6657\6BD3\6536\96C6\6574\7406"; 
+}
+.foot {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+}
+</style>
+<script src="./static/workers.js"></script>
+<script src="./static/1.js"></script>
+<script src="./static/main.js"></script>
+</head>
+<body>
+    <div class="container">
+<div class="header">
+    <h1></h1>
+    <p></p>
+</div>
+
+        <!-- 单位信息 -->
+        <div class="form-section">
+            <div class="input-group">
+                <div class="input-row">
+                    <label>单位名称</label>
+                    <input type="text" id="company" value="【建阳公司】">
+                </div>
+                <!-- 修改后的部门班组选择部分 -->
+<div class="input-row">
+    <label>部门班组</label>
+    <select id="department" autocomplete="off">
+        <option value="">请选择班组</option>
+        <option>城郊供电所</option>
+        <option>运检部配电抢修班</option>
+        <option>莒口供电所</option>
+        <option>水吉供电所</option>
+        <option>水吉供电所回龙抢修班</option>
+        <option>徐市供电所</option>
+        <option>麻沙供电所</option>
+        <option>麻沙供电所书坊服务站</option>
+        <option>漳墩供电所</option>
+        <option>小湖供电所</option>
+        <option>黄坑供电所</option>
+    </select>
+</div>
+                <div class="input-row">
+                    <label>工作电话</label>
+                    <input type="tel" id="workPhone" placeholder="请先选择班组">
+                </div>
+            </div>
+
+            <!-- 抢修人员 -->
+<!-- 修改后的工作人员选择部分 -->
+<div class="staff-group">
+    <div class="input-row">
+        <label>工作人员1</label>
+        <select id="staff1" disabled>
+            <option value="">请选择班组后选择</option>
+        </select>
+    </div>
+    <div class="input-row">
+        <label>工作人员2</label>
+        <select id="staff2" disabled>
+            <option value="">请选择班组后选择</option>
+        </select>
+    </div>
+</div>
+
+            <!-- 到岗情况 -->
+<!-- 优化后的到岗情况 -->
+<div class="input-group attendance-group">
+    <div class="radio-container">
+        <label class="attendance-option">
+            <input type="radio" name="attendance" value="yes" required>
+            <span class="option-label">确认到岗</span>
+            <i class="check-icon"></i>
+        </label>
+        <label class="attendance-option">
+            <input type="radio" name="attendance" value="no">
+            <span class="option-label">未到岗</span>
+            <i class="check-icon"></i>
+        </label>
+    </div>
+</div>
+
+            <div class="input-group">
+                <div class="input-row">
+                    <label>故障类型</label>
+                    <select id="faultType" disabled></select>
+                </div>
+                <div class="input-row hidden" id="customerPhoneSection">
+                    <label>客户电话</label>
+                    <input type="tel" id="customerPhone" placeholder="请输入客户电话">
+                </div>
+            </div>
+
+
+        <!-- 模板生成 -->
+         <div class="template-section">
+            <button onclick="generateTemplate()">🔍生成回单模板</button>        </div>
+    <div id="dynamicTemplates"></div> 
+	<!-- 替换原有静态模板 -->
+        </div>
+    </div>
+    </div>
+	
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?fd963079d8ac2e1bfdc9ed693ee9534b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<p align="center" style="line-height:30px">
 <a href="http://hd.592gg.cn/" style="color:#2776D2;font-size:14px;text-decoration:none;" target="_blank">抢修回单模版</a>
 <a href="app.apk" style="color:#4CAF50;font-size:14px;text-decoration:none;margin: 5px;" target="_blank">App下载</a><br>
 <a href="http://cd-1.frp.one:15598/" style="color:#2AA899;font-size:12px;text-decoration:none;" target="_blank">备用网址1</a>
 <a href="http://cd-2.frp.one:15598/" style="color:#214F78;font-size:12px;text-decoration:none;" target="_blank">备用网址2</a><br>
+</p>
+    </div>
+
+</body>
+</html>
+
+
+    <div class="foot">
+	
+	
+	
+
+
