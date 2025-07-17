@@ -111,7 +111,7 @@ function processContent(config) {
     const departmentPhone = departments[departmentVal]?.phone || '工作电话';
 	
 	// 定义高亮关键词正则
-    const highlightRegex = /(部门班组|姓名1|姓名2|请添加|工作电话|客户电话|未填写|非居|自行处理|协助处理|属实|不属实|研判|明察暗访|全量|跳闸|断线|烧损|烧毁|10kV|10CM|表前开关|单户|多户|不满意)/g;
+    const highlightRegex = /(部门班组|姓名1|姓名2|请添加|工作电话|客户电话|未填写|非居|自行处理|协助处理|属实|不属实|研判|明察暗访|全量|跳闸|断线|烧损|烧毁|10kV|10CM|表前开关|单户|多户|不满意|不明原因引起|客户家里内部故障引起|开关有问题)/g;
 		// 处理前缀高亮
 	const highlightPrefix = (text) => 
         text.replace(highlightRegex, '<span class="highlight-mis">$1</span>');
