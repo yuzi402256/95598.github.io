@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>抢修回单模版07.24更新</title>
+    <title>抢修回单模版2025.07.24更新</title>
     <link rel="stylesheet" type="text/css" href="./static/main.css">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 	<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.ico">
@@ -11,24 +11,55 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.ico">
    
 <style>
-。header {
+.header {
     padding: 20px;
     background: var(--primary);
     color: white;
     border-radius: 12px 12px 0 0;
     text-align: center;
+    position: relative;
 }
 
-。header h1::before {
-    content: "\26A1\62A2\4FEE\56DE\5355\6A21\7248-(\5efa\9633\516c\53f8)";
+.header h1::before {
+    content: "\26A1\62A2\4FEE\56DE\5355\6A21\7248-(\5efa\9632\516c\53f8)";
 }
-。header p::before {
+.header p::before {
     content: "\2705\66FE\6657\6BD3\6536\96C6\6574\7406"; 
 }
-。foot {
+.foot {
     position: absolute;
     left: -9999px;
     top: -9999px;
+}
+
+/* 毛玻璃效果的返回旧版按钮 - 位于header右下角 */
+.return-old-version-btn {
+    position: absolute;
+    bottom: 20px; /* 距离底部的距离 */
+    right: 20px; /* 距离右侧边界的距离 */
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .return-old-version-btn {
+        bottom: 10px;
+        right: 10px;
+        padding: 8px 12px;
+        font-size: 12px;
+    }
 }
 </style>
 <script src="./static/workers.js"></script>
@@ -40,6 +71,7 @@
 <div class="header">
     <h1></h1>
     <p></p>
+	<a href="http://hd2026.592gg.cn/" class="return-old-version-btn" target="_blank">访问新版</a>
 </div>
 
         <!-- 单位信息 -->
